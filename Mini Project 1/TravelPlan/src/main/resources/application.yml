@@ -1,0 +1,26 @@
+server:
+  port: 8931
+
+spring:
+  application:
+    name: TravelPlan
+  datasource:
+    driverClassName: org.h2.Driver
+    password: sa
+    url: jdbc:h2:mem:testdb
+    username: sa
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+plan:
+  module:
+    messages:
+      save-success: Travel Plan is saved Successfully
+      save-failure: Travel Plan is not saved, something went wrong
